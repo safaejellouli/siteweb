@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Éclat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-maroon">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="acceuil.html">ÉCLAT</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="acceuil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="boutique.html">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="panier.html">Panier</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="text-center text-maroon mb-4">Votre Panier</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <ul id="listePanier" class="list-group list-group-flush mb-3">
+                    </ul>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-luxe me-2" onclick="viderPanier()">Vider le panier</button>
+                        <a href="boutique.html" class="btn btn-luxe">Continuer mes achats</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var panierString = localStorage.getItem("panier");
+        var liste = document.getElementById("listePanier");
+
+        if (panierString && panierString !== "") {
+            var articles = panierString.split(",");
+            for (var i = 0; i < articles.length; i++) {
+                var item = document.createElement("li");
+                item.className = "list-group-item";
+                item.innerText = articles[i];
+                liste.appendChild(item);
+            }
+        } else {
+            liste.innerHTML = "<li class='list-group-item text-center'>Votre panier est vide.</li>";
+        }
+
+        function viderPanier() {
+            localStorage.removeItem("panier");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - Éclat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-maroon">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="acceuil.html">ÉCLAT</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="acceuil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="boutique.html">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link" href="panier.html">Panier</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 text-center">
+        <p class="text-maroon fst-italic">Note : Pour accéder à votre panier, retournez à la page d'Accueil.</p>
+        <h2 class="text-maroon mb-4">Nos Catégories</h2>
+        
+        <div class="row mb-5">
+            <div class="col-md">
+                <img src="bracelet 1.jpeg" class="img-fluid mb-2 rounded" style="height: 150px; width: 100%; object-fit: cover; background-color: #eee;">
+                <button class="btn btn-luxe w-100" onclick="montrer('bracelets')">Bracelets</button>
+            </div>
+            <div class="col-md">
+                <img src="r4.jpeg" class="img-fluid mb-2 rounded" style="height: 150px; width: 100%; object-fit: cover; background-color: #eee;">
+                <button class="btn btn-luxe w-100" onclick="montrer('bagues')">Bagues</button>
+            </div>
+            <div class="col-md">
+                <img src="e6.jpeg" class="img-fluid mb-2 rounded" style="height: 150px; width: 100%; object-fit: cover; background-color: #eee;">
+                <button class="btn btn-luxe w-100" onclick="montrer('boucles')">Boucles</button>
+            </div>
+            <div class="col-md">
+                <img src="n6.jpeg" class="img-fluid mb-2 rounded" style="height: 150px; width: 100%; object-fit: cover; background-color: #eee;">
+                <button class="btn btn-luxe w-100" onclick="montrer('colliers')">Colliers</button>
+            </div>
+            <div class="col-md">
+                <img src="b1.jpeg" class="img-fluid mb-2 rounded" style="height: 150px; width: 100%; object-fit: cover; background-color: #eee;">
+                <button class="btn btn-luxe w-100" onclick="montrer('vetements')">Vêtements</button>
+            </div>
+        </div>
+
+        <div id="zone-bracelets" style="display: none;">
+            <h3 class="text-maroon mb-3">Bracelets</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="bracelet 1.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Golden Wave</h5><p class="card-text text-maroon fw-bold">150 DH</p><button class="btn btn-luxe" onclick="ajouter('Bracelet Classique', 150)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="bracelet 2.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Burgundy charm  </h5><p class="card-text text-maroon fw-bold">160 DH</p><button class="btn btn-luxe" onclick="ajouter('Bracelet Perle', 160)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="bracelet 3.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Eternel rubyr</h5><p class="card-text text-maroon fw-bold">170 DH</p><button class="btn btn-luxe" onclick="ajouter('Bracelet Or', 170)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="bracelet 4.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Classic gold chain</h5><p class="card-text text-maroon fw-bold">180 DH</p><button class="btn btn-luxe" onclick="ajouter('Bracelet Argent', 180)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="bracelet 5.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Garnet cuff</h5><p class="card-text text-maroon fw-bold">190 DH</p><button class="btn btn-luxe" onclick="ajouter('Bracelet Pierre', 190)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="bracelet 6.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Mosaic bangle</h5><p class="card-text text-maroon fw-bold">200 DH</p><button class="btn btn-luxe" onclick="ajouter('Bracelet Luxe', 200)">Ajouter</button></div></div></div>
+            </div>
+        </div>
+
+        <div id="zone-bagues" style="display: none;">
+            <h3 class="text-maroon mb-3">Bagues</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="r4.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">starlight</h5><p class="card-text text-maroon fw-bold">80 DH</p><button class="btn btn-luxe" onclick="ajouter('Bague Simple', 80)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="r1.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Gold loop</h5><p class="card-text text-maroon fw-bold">90 DH</p><button class="btn btn-luxe" onclick="ajouter('Bague Diamant', 90)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="ring 3.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">petite rubis</h5><p class="card-text text-maroon fw-bold">100 DH</p><button class="btn btn-luxe" onclick="ajouter('Bague Rubis', 100)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="r2.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">emerald</h5><p class="card-text text-maroon fw-bold">110 DH</p><button class="btn btn-luxe" onclick="ajouter('Bague Saphir', 110)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="r5.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">five-stone</h5><p class="card-text text-maroon fw-bold">115 DH</p><button class="btn btn-luxe" onclick="ajouter('Bague Émeraude', 115)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="r6.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Bold maroon</h5><p class="card-text text-maroon fw-bold">120 DH</p><button class="btn btn-luxe" onclick="ajouter('Bague Royale', 120)">Ajouter</button></div></div></div>
+            </div>
+        </div>
+
+        <div id="zone-boucles" style="display: none;">
+            <h3 class="text-maroon mb-3">Boucles</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="e5.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Boucle Perle</h5><p class="card-text text-maroon fw-bold">80 DH</p><button class="btn btn-luxe" onclick="ajouter('Boucle Perle', 80)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="e3.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Boucle Or</h5><p class="card-text text-maroon fw-bold">90 DH</p><button class="btn btn-luxe" onclick="ajouter('Boucle Or', 90)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="e6.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Royal</h5><p class="card-text text-maroon fw-bold">100 DH</p><button class="btn btn-luxe" onclick="ajouter('Boucle Argent', 100)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="cr.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Boucle Cristal</h5><p class="card-text text-maroon fw-bold">110 DH</p><button class="btn btn-luxe" onclick="ajouter('Boucle Cristal', 110)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="fl.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Boucle Fleur</h5><p class="card-text text-maroon fw-bold">115 DH</p><button class="btn btn-luxe" onclick="ajouter('Boucle Goutte', 115)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="luxe.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Boucle Luxe</h5><p class="card-text text-maroon fw-bold">120 DH</p><button class="btn btn-luxe" onclick="ajouter('Boucle Luxe', 120)">Ajouter</button></div></div></div>
+            </div>
+        </div>
+
+        <div id="zone-colliers" style="display: none;">
+            <h3 class="text-maroon mb-3">Colliers</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="fin.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Collier Fin</h5><p class="card-text text-maroon fw-bold">200 DH</p><button class="btn btn-luxe" onclick="ajouter('Collier Fin', 200)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="r.s.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">red snow</h5><p class="card-text text-maroon fw-bold">210 DH</p><button class="btn btn-luxe" onclick="ajouter('Collier Pendentif', 210)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="n5.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">maroon maze</h5><p class="card-text text-maroon fw-bold">220 DH</p><button class="btn btn-luxe" onclick="ajouter('Collier Ras de cou', 220)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="long.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Collier Long</h5><p class="card-text text-maroon fw-bold">230 DH</p><button class="btn btn-luxe" onclick="ajouter('Collier Long', 230)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="perles.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Collier Perles</h5><p class="card-text text-maroon fw-bold">240 DH</p><button class="btn btn-luxe" onclick="ajouter('Collier Perles', 240)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="n6.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Collier Diamant</h5><p class="card-text text-maroon fw-bold">260 DH</p><button class="btn btn-luxe" onclick="ajouter('Collier Diamant', 260)">Ajouter</button></div></div></div>
+            </div>
+        </div>
+
+        <div id="zone-vetements" style="display: none;">
+            <h3 class="text-maroon mb-3">Bijoux Vêtements</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="b1.jpeg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Double étoile</h5><p class="card-text text-maroon fw-bold">60 DH</p><button class="btn btn-luxe" onclick="ajouter('Broche Fleur', 60)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="b2.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">chardon doré</h5><p class="card-text text-maroon fw-bold">70 DH</p><button class="btn btn-luxe" onclick="ajouter('Broche Feuille', 70)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="b3.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">épingle tulip</h5><p class="card-text text-maroon fw-bold">80 DH</p><button class="btn btn-luxe" onclick="ajouter('Bouton Bijou', 80)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="b4.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">broche manteau</h5><p class="card-text text-maroon fw-bold">90 DH</p><button class="btn btn-luxe" onclick="ajouter('Épingle Cravate', 90)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="b5.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">Perle centrale</h5><p class="card-text text-maroon fw-bold">100 DH</p><button class="btn btn-luxe" onclick="ajouter('Chaîne Vêtement', 100)">Ajouter</button></div></div></div>
+                <div class="col-md-4 mb-4"><div class="card h-100"><img src="b6.jpg" class="card-img-top" style="height: 200px; object-fit: cover; background-color: #eee;"><div class="card-body text-center"><h5 class="card-title">broche camée</h5><p class="card-text text-maroon fw-bold">120 DH</p><button class="btn btn-luxe" onclick="ajouter('Parure Vêtement', 120)">Ajouter</button></div></div></div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="acceuil.html" class="btn btn-luxe btn-lg">Retour à l'accueil</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var panier = [];
+
+        function montrer(nom) {
+            document.getElementById("zone-bracelets").style.display = "none";
+            document.getElementById("zone-bagues").style.display = "none";
+            document.getElementById("zone-boucles").style.display = "none";
+            document.getElementById("zone-colliers").style.display = "none";
+            document.getElementById("zone-vetements").style.display = "none";
+            document.getElementById("zone-" + nom).style.display = "block";
+        }
+
+        function ajouter(nom, prix) {
+            panier.push(nom);
+            localStorage.setItem("panier", panier);
+            alert(nom + " ajouté ! Total : " + panier.length);
+        }
+
+        var catOuverte = localStorage.getItem("categorieOuverte");
+        if (catOuverte) {
+            montrer(catOuverte);
+            localStorage.removeItem("categorieOuverte");
+        }
+    </script>
+</body>
+</html>

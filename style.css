@@ -1,0 +1,5 @@
+body { background-color: #fdfbf7; font-family: 'Georgia', serif; }
+.bg-maroon { background-color: #800000 !important; color: white; }
+.text-maroon { color: #800000; }
+.btn-luxe { background-color: #800000; color: white; border: none; }
+.btn-luxe:hover { background-color: #5c0000; color: white; }
